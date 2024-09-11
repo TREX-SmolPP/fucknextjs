@@ -131,7 +131,7 @@ nav .login a{
 
 .prompt-sec .prompt-img .slider-container{
     width: 100%;
-    height: 72vh;
+    height: 74vh;
     border-radius: 60px;
     object-position: top center;
     box-shadow: 0 -20px 40px rgba(0, 0, 0, 1);
@@ -139,7 +139,7 @@ nav .login a{
 
 .prompt-sec .prompt-img .slider-container .slider-wrapper .obama{
     width: 100%;
-    object-position: top;
+    object-position: center;
     object-fit: cover;
     height: 100%;
 }
