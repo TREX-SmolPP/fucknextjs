@@ -2,6 +2,8 @@ import Image from 'next/image';
 import './style.css'
 import img1 from "./image-1.jpg";
 import img2 from "./image-2.jpg";
+import img3 from "./image-3.jpg";
+import img4 from "./image-4.jpg";
 
 
 export default function HomePage() {
@@ -31,10 +33,10 @@ export default function HomePage() {
         <div className="slider-container">
           <div className="slider-wrapper">
             <Image className="obama" src={img1} alt=""/>
-            <Image className="obama" src={img2} />
-            <img src="./image-3.jpg" />
-            <img src="image-4.jpg" />
           </div>
+            {/* <Image className="obama" src={img2} />
+            <Image className="obama" src={img3} alt=""/>
+            <Image className="obama" src={img4} alt=""/>             */}
         </div>
         <div className="tabs">
           <a href="" className="active">
@@ -74,11 +76,7 @@ export default function HomePage() {
           project is about pushing boundaries and setting new standards in
           healthcare technology.
         </p>
-        {/* <div class="images">
-            <img src="assets/img-1.JPG">
-            <img src="assets/img-2.JPG">
-            <img src="assets/img-3.JPG">
-        </div> */}
+        
       </div>
       <div className="image-sec">
         <div className="firstRow">
