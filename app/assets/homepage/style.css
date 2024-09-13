@@ -30,6 +30,10 @@ body{
     background: #09090c;
 }
 
+
+
+
+
 nav,
 footer{
     display: flex;
@@ -163,6 +167,8 @@ nav .login a{
     height: 100%;
     width: 100%;
     object-fit: contain;
+    /* animation: bushPopup 1s; */
+    
 }
 
 .building{
@@ -178,6 +184,7 @@ nav .login a{
     height: 100%;
     width: 100%;
     object-fit: contain;
+    /* animation: buildingPopup 1s ease-in; */
 }
 
 .truck img{
@@ -194,6 +201,9 @@ nav .login a{
     z-index: 2;
     animation: moveTruck1 linear;
     animation-timeline: view();
+    img{
+        animation: truck1Popup 2s;
+    }
 }
 
 .truck2{
@@ -203,25 +213,75 @@ nav .login a{
     z-index: 2;
     animation: moveTruck2 linear;
     animation-timeline: view();
+    img{
+        animation: truck2Popup 2s;
+    }
 }
 
 
 @keyframes moveTruck1{
     from{
-        transform: translateY(-40%) translateX(65%);
+        transform: translateY(-45%) translateX(65%);
     }
     to{
-        transform: translateY(-58%) translateX(-150%);
+        transform: translateY(-45%) translateX(-150%);
     }
 }
 @keyframes moveTruck2{
     from{
-        transform: translateY(-40%) translateX(65%);
+        transform: translateY(-45%) translateX(65%);
     }
     to{
-        transform: translateY(-58%) translateX(150%);
+        transform: translateY(-45%) translateX(150%);
     }
 }
+
+@keyframes buildingPopup{
+    from{
+        scale: 0;
+        transform: translateY(100%);
+    }
+    90%{
+        scale: 0;
+        transform: translateY(100%);
+    }
+    to{
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bushPopup{
+    from{
+        scale: 0;
+    }
+    to{
+        scale: 1;
+    }
+}
+
+@keyframes truck1Popup{
+    from{
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes truck2Popup{
+    from{
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 
 .prompt-sec .prompt-img .tabs{
@@ -312,6 +372,18 @@ nav .login a{
     
 }
 
+.heisenTrack{
+    display: inline-block;
+    height: 2em;
+    width: 6em;
+    transform: translateY(0.8em);
+}
+.heisenTrack img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
 .showcase .text-sec{
     display: flex;
     align-items: center;
@@ -357,7 +429,23 @@ nav .login a{
     font-weight: 100;
     
 }
-
+.showcase .image-sec .member{
+    animation: autoShow linear;
+    animation-timeline: view(95% auto);
+}
+@keyframes autoShow{
+    from{
+        opacity: 0;
+        scale: 0.3;
+    }
+    /* 45%{
+        opacity: 1;
+    } */
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
 
 
 .services .header,
@@ -366,7 +454,7 @@ nav .login a{
     align-items: center;
     justify-content: flex-start;
     padding: 40px 80px 0;
-    padding-top: 50px;
+    padding-top: 0px;
 }
 
 .services .header h3,
@@ -389,6 +477,7 @@ nav .login a{
     padding-bottom: 40px;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 2em;
     
 }
 
@@ -400,6 +489,12 @@ nav .login a{
     height: 17em;
     margin-bottom: 1em;
     /* font-weight: 400; */
+    transition: all 0.4s;
+}
+
+.services .service-items .item:hover{
+    background-color: rgb(95, 95, 227);
+
 }
 
 .services .service-items .item .title{

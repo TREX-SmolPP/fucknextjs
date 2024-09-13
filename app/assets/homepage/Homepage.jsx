@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import './style.css';
 
+import heisenTrack from './heisenTrackLogo.png';
+
 import truck1 from './hero/truck1.png';
 import truck2 from './hero/truck2.png';
 import building from './hero/building.png';
@@ -21,9 +23,15 @@ import medical_services from './assets/rolesIcon/medical_services.png';
 import store from './assets/rolesIcon/store.png';
 import trolley from './assets/rolesIcon/trolley.png';
 
+
+
 export default function HomePage() {
    
+
+
   return (<div className='homePage'>
+   
+
     <nav id="free-trial">
       <div className="logo">{/* <i class="ri-bard-fill"></i> */}</div>
       <div className="nav-links">
@@ -169,8 +177,10 @@ export default function HomePage() {
     
     <div id="team-members" className="showcase">
       <h3>
-        This is team <span className="blueHeading">Blue</span> Stock
-      </h3>
+        This is team <div className="heisenTrack">
+            <Image src={heisenTrack} />
+        </div>
+        </h3>
       <div className="text-sec">
         <p>
           Our team is on a mission to redefine medicine management with innovative
