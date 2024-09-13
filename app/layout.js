@@ -12,7 +12,6 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-
 export const metadata = {
   title: "Blue Stocks",
   description: "This is homepage for our service",

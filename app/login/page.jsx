@@ -5,7 +5,7 @@ export default function Login() {
     return (
         <div className={styles.page1}>
             <div className={styles.loginpannel}>
-                <h1 classname={styles.h1}>Login</h1>
+                <h1 classname={styles.loginHeading}>Login</h1>
                 <input type="text" placeholder="Username" id="user" className={styles.details} />
                 <i className="fa-solid fa-user" id={styles.icon1} />
                 <input

@@ -129,7 +129,15 @@ nav .login a{
 }
 
 
-
+.shadow{
+    box-shadow: 0px -2em 30px rgb(0, 0, 0);
+    height: 1em;
+    width: 55vw;
+    margin-top: 6px;
+    background-color: blue;
+    margin: auto;
+    margin-bottom: 1em;
+}
 .prompt-sec .prompt-img .slider-container{
     width: 100%;
     height: 74vh;
@@ -147,6 +155,7 @@ nav .login a{
     right: 50%;
     top: 50%;
     transform: translateY(-50%) translateX(50%);
+    z-index: 1;
     
 }
 
@@ -156,7 +165,63 @@ nav .login a{
     object-fit: contain;
 }
 
+.building{
+    position: absolute;
+    width: 50em;
+    right: 50%;
+    top: 50%;
+    transform: translateY(-55%) translateX(50%);
+    z-index: 3;
+}
 
+.building img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.truck img{
+    height: 100%;
+    width: 100%;
+    width: 50em;
+    object-fit: contain;
+}
+
+.truck1{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    z-index: 2;
+    animation: moveTruck1 linear;
+    animation-timeline: view();
+}
+
+.truck2{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    z-index: 2;
+    animation: moveTruck2 linear;
+    animation-timeline: view();
+}
+
+
+@keyframes moveTruck1{
+    from{
+        transform: translateY(-40%) translateX(65%);
+    }
+    to{
+        transform: translateY(-58%) translateX(-150%);
+    }
+}
+@keyframes moveTruck2{
+    from{
+        transform: translateY(-40%) translateX(65%);
+    }
+    to{
+        transform: translateY(-58%) translateX(150%);
+    }
+}
 
 
 .prompt-sec .prompt-img .tabs{
@@ -172,6 +237,7 @@ nav .login a{
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 50px;
+    z-index: 5;
 }
 
 .prompt-sec .prompt-img .tabs a{

@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import './style.css';
 
-import truck from './hero/truck.png';
+import truck1 from './hero/truck1.png';
+import truck2 from './hero/truck2.png';
 import building from './hero/building.png';
 import bush from './hero/bush.png';
 
@@ -19,7 +20,6 @@ import factory from './assets/rolesIcon/factory.png';
 import medical_services from './assets/rolesIcon/medical_services.png';
 import store from './assets/rolesIcon/store.png';
 import trolley from './assets/rolesIcon/trolley.png';
-import build from 'next/dist/build';
 
 export default function HomePage() {
    
@@ -43,15 +43,26 @@ export default function HomePage() {
     <div className="prompt-sec">
       <h1>
         <span className="blueHeading">Blue</span> Stock
+        
       </h1>
       <div className="prompt-img">
+        
+      {/* <div className="shadow"></div> */}
         <div className="slider-container">
           
 
-          {/* <div className="bush">
+          <div className="bush">
             <Image src={bush}/>
           </div>  
-           */}
+          <div className="building">
+            <Image src={building} />
+          </div>
+          <div className="truck1 truck">
+            <Image src={truck1} />
+          </div>
+          <div className="truck2 truck">
+            <Image src={truck2} />
+          </div>
 
 
         </div>
