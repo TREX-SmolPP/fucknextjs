@@ -199,6 +199,7 @@ nav .login a{
     right: 50%;
     top: 50%;
     z-index: 2;
+    transform: translateY(-45%) translateX(65%);
     animation: moveTruck1 linear;
     animation-timeline: view();
     img{
@@ -211,6 +212,7 @@ nav .login a{
     right: 50%;
     top: 50%;
     z-index: 2;
+    transform: translateY(-45%) translateX(65%);
     animation: moveTruck2 linear;
     animation-timeline: view();
     img{
@@ -489,11 +491,15 @@ nav .login a{
     height: 17em;
     margin-bottom: 1em;
     /* font-weight: 400; */
+    border: 2px solid gold;
     transition: all 0.4s;
+    animation: autoShow linear;
+    animation-timeline: view(95% auto);
 }
 
 .services .service-items .item:hover{
     background-color: rgb(95, 95, 227);
+    border: 2px solid white;
 
 }
 
