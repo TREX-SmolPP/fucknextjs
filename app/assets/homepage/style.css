@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
@@ -124,7 +125,7 @@ nav .login a{
 .prompt-sec .prompt-img{
     position: relative;
     margin: 0 0.8em;
-    height: 72vh
+    height: 74vh
 }
 
 
@@ -132,92 +133,36 @@ nav .login a{
 .prompt-sec .prompt-img .slider-container{
     width: 100%;
     height: 74vh;
-    border-radius: 60px;
+    /* border-radius: 60px; */
     object-position: top center;
-    box-shadow: 0 -20px 40px rgba(0, 0, 0, 1);
+    position: relative;
+    /* background-color: #02b9a3; */
+    /* box-shadow: 0 -20px 40px rgba(0, 0, 0, 1); */
 }
 
-.prompt-sec .prompt-img .slider-container .slider-wrapper .obama{
-    width: 100%;
-    object-position: center;
-    object-fit: cover;
-    height: 100%;
-}
-
-.slider-container{
-    width: 100%;
+.slider-container .bush{
     position: absolute;
-    /* transform: translate(-50%,-50%);
+    height: 50em;
+    width: 80em;
+    right: 50%;
     top: 50%;
-    left: 50%; */
-    overflow: hidden;
-    /* border: 20px solid #ffffff; */
-    /* border-radius: 8px; */
-    box-shadow: 10px 25px 30px rgba(30,30,200,0.3);
+    transform: translateY(-50%) translateX(50%);
+    
 }
-.slider-wrapper{
-    width: 100%;
+
+.slider-container .bush img{
     height: 100%;
-    display: flex;
-    /* animation: slide 7s infinite; */
-}
-@keyframes slide{
-    0%{
-        transform: translateX(0);
-    }
-    25%{
-        transform: translateX(0);
-    }
-    30%{
-        transform: translateX(-100%);
-    }
-    50%{
-        transform: translateX(-100%);
-    }
-    55%{
-        transform: translateX(-200%);
-    }
-    75%{
-        transform: translateX(-200%);
-    }
-    80%{
-        transform: translateX(-300%);
-    }
-    99%{
-        transform: translateX(-300%);
-    }
-    100%{
-        transform: translateX(0%);
-    }
+    width: 100%;
+    object-fit: contain;
 }
 
 
-/* .prompt-sec .prompt-img input{
-    width: 55%;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.22);
-    border-radius: 20px;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    font-size: 16px;
-    padding: 16px;
-    text-align: center;
-    color: #fff;
-}
 
-.prompt-sec .prompt-img input::placeholder{
-    color: #ccc;
-} */
 
 .prompt-sec .prompt-img .tabs{
     display: flex;
     align-items: center;
     gap: 5px;
-    /* z-index: 1000; */
     position: absolute;
     bottom: 0px;
     left: 50%;
@@ -259,10 +204,11 @@ nav .login a{
         gap: 2em;
         /* flex-wrap: wrap; */
         .dashboardImg{
-            width: 100%;
             img{
                 width: 100%;
+                object-fit: contain;
             }
+            
         }
         .text{
             display: flex;
@@ -287,7 +233,7 @@ nav .login a{
 
 .showcase{
     padding: 0px 80px;
-    margin-top: 0;
+    margin-top: 10em;
 
 }
 

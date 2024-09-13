@@ -1,14 +1,29 @@
 import Image from 'next/image';
-import './style.css'
-import img1 from "./image-1.jpg";
-import img2 from "./image-2.jpg";
-import img3 from "./image-3.jpg";
-import img4 from "./image-4.jpg";
+import './style.css';
 
+import truck from './hero/truck.png';
+import building from './hero/building.png';
+import bush from './hero/bush.png';
+
+import shreya from "./members/shreya.jpg";
+import aditi from "./members/aditi.jpg";
+import abhraneel from "./members/abhraneel.jpg";
+import tridip from "./members/tridip.jpg";
+import dipayan from "./members/dipayan.jpg";
+import pratayan from "./members/pratayan.jpg";
+
+import dashboardImg from './assets/Screenshot 2024-09-11 163535.png';
+
+import crown from './assets/rolesIcon/crown.png';
+import factory from './assets/rolesIcon/factory.png';
+import medical_services from './assets/rolesIcon/medical_services.png';
+import store from './assets/rolesIcon/store.png';
+import trolley from './assets/rolesIcon/trolley.png';
+import build from 'next/dist/build';
 
 export default function HomePage() {
    
-  return (<>
+  return (<div className='homePage'>
     <nav id="free-trial">
       <div className="logo">{/* <i class="ri-bard-fill"></i> */}</div>
       <div className="nav-links">
@@ -31,12 +46,14 @@ export default function HomePage() {
       </h1>
       <div className="prompt-img">
         <div className="slider-container">
-          <div className="slider-wrapper">
-            <Image className="obama" src={img1} alt=""/>
-          </div>
-            {/* <Image className="obama" src={img2} />
-            <Image className="obama" src={img3} alt=""/>
-            <Image className="obama" src={img4} alt=""/>             */}
+          
+
+          {/* <div className="bush">
+            <Image src={bush}/>
+          </div>  
+           */}
+
+
         </div>
         <div className="tabs">
           <a href="" className="active">
@@ -53,7 +70,7 @@ export default function HomePage() {
       <h3>Interractive Dashboards</h3>
       <div className="dashContainer">
         <div className="dashboardImg">
-          <img src="\Screenshot 2024-09-11 163535.png" alt="" />
+        {/* <Image src={dashboardImg} layout='object-fit'/> */}
         </div>
         <div className="text">
           <p>
@@ -63,6 +80,82 @@ export default function HomePage() {
         </div>
       </div>
     </div>
+    
+    <div className="services" id="roles">
+      <div className="header">
+        <h3>Roles</h3>
+        <p>Blue Stock provides the users with 5 roles hierarchy.</p>
+      </div>
+      <div className="service-items">
+        <div className="item active">
+          <div className="title">
+            <div className="gradient">
+              <Image src={crown}/>
+            </div>
+            <p>Main Admin</p>
+          </div>
+          <div className="desc">
+            <h5>Admin</h5>
+            <p>
+              Have a complete top down view of the stock management and track the
+              supply chain.
+            </p>
+          </div>
+        </div>
+        <div className="item">
+          <div className="title">
+            <div className="gradient">
+            <Image src={factory}/>
+            </div>
+            <p>Manufacturer</p>
+          </div>
+          <div className="desc">
+            <h5>Manufacturer</h5>
+            <p>Info about manufacturer.</p>
+          </div>
+        </div>
+        <div className="item">
+          <div className="title">
+            <div className="gradient">
+            <Image src={trolley}/>
+            </div>
+            <p>Wholesaler</p>
+          </div>
+          <div className="desc">
+            <h5>Wholesaler</h5>
+            <p>Info about wholesaler</p>
+          </div>
+        </div>
+        <div className="item">
+          <div className="title">
+            <div className="gradient">
+            <Image src={medical_services}/>
+            </div>
+            <p>Retailer</p>
+          </div>
+          <div className="desc">
+            <h5>Retailer</h5>
+            <p>
+              Join a dynamic community of AI experts to share ideas and stay
+              updated on trends.
+            </p>
+          </div>
+        </div>
+        <div className="item">
+          <div className="title">
+            <div className="gradient">
+            <Image src={store}/>
+            </div>
+            <p>Pharmacist</p>
+          </div>
+          <div className="desc">
+            <h5>Pharmacist</h5>
+            <p>Info about pharmacist.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div id="team-members" className="showcase">
       <h3>
         This is team <span className="blueHeading">Blue</span> Stock
@@ -81,114 +174,54 @@ export default function HomePage() {
       <div className="image-sec">
         <div className="firstRow">
           <div className="member">
-            <img src="members\shreya.JPG" />
+            <div className="memberImage">
+              <Image src={shreya}/>
+            </div>
             <p>Shreya Sinha</p>
             <span>CSBS 2nd Year</span>
           </div>
           <div className="member">
-            <img src="members\aditi.jpg" />
+          <div className="memberImage">
+              <Image src={aditi}/>
+            </div>
             <p>Aditi Anand</p>
             <span>CSBS 2nd Year</span>
           </div>
           <div className="member">
-            <img src="members\abhraneel.jpg" />
+          <div className="memberImage">
+              <Image src={abhraneel}/>
+            </div>
             <p>Abhraneel Dhar</p>
             <span>CSBS 2nd Year</span>
           </div>
         </div>
         <div className="secondRow">
           <div className="member">
-            <img src="members\pratayan.jpg" />
+          <div className="memberImage">
+              <Image src={pratayan}/>
+            </div>
             <p>Pratayan Bera</p>
             <span>AIML 2nd Year</span>
           </div>
           <div className="member">
-            <img src="members\tridip.jpg" />
-            <p>Tridip Debnath</p>
+          <div className="memberImage">
+              <Image src={tridip}/>
+            </div>
+            <p>Tredip Debnath</p>
             <span>CSDS 2nd Year</span>
           </div>
           <div className="member">
-            <img src="members\dipayan.jpg" />
+          <div className="memberImage">
+              <Image src={dipayan}/>
+            </div>
             <p>Dipayan Sen</p>
             <span>CSBS 2nd Year</span>
           </div>
         </div>
       </div>
     </div>
-    <div className="services" id="roles">
-      <div className="header">
-        <h3>Roles</h3>
-        <p>Blue Stock provides the users with 5 roles hierarchy.</p>
-      </div>
-      <div className="service-items">
-        <div className="item active">
-          <div className="title">
-            <div className="gradient">
-              <img src="assets\rolesIcon\crown.png" alt="" />
-            </div>
-            <p>Main Admin</p>
-          </div>
-          <div className="desc">
-            <h5>Admin</h5>
-            <p>
-              Have a complete top down view of the stock management and track the
-              supply chain.
-            </p>
-          </div>
-        </div>
-        <div className="item">
-          <div className="title">
-            <div className="gradient">
-              <img src="assets\rolesIcon\factory.png" alt="" />
-            </div>
-            <p>Manufacturer</p>
-          </div>
-          <div className="desc">
-            <h5>Manufacturer</h5>
-            <p>Info about manufacturer.</p>
-          </div>
-        </div>
-        <div className="item">
-          <div className="title">
-            <div className="gradient">
-              <img src="assets\rolesIcon\trolley.png" alt="" />
-            </div>
-            <p>Wholesaler</p>
-          </div>
-          <div className="desc">
-            <h5>Wholesaler</h5>
-            <p>Info about wholesaler</p>
-          </div>
-        </div>
-        <div className="item">
-          <div className="title">
-            <div className="gradient">
-              <img src="assets\rolesIcon\medical_services.png" alt="" />
-            </div>
-            <p>Retailer</p>
-          </div>
-          <div className="desc">
-            <h5>Retailer</h5>
-            <p>
-              Join a dynamic community of AI experts to share ideas and stay
-              updated on trends.
-            </p>
-          </div>
-        </div>
-        <div className="item">
-          <div className="title">
-            <div className="gradient">
-              <img src="assets\rolesIcon\store.png" alt="" />
-            </div>
-            <p>Pharmacist</p>
-          </div>
-          <div className="desc">
-            <h5>Pharmacist</h5>
-            <p>Info about pharmacist.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+
+
     <div className="video-sec" id="discover">
       <div className="header">
         <p>
@@ -204,6 +237,6 @@ export default function HomePage() {
         </button>
       </div>
     </div>
-  </>
+  </div>
   );
 }
